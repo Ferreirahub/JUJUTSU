@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root{
+    --primary-color: #fd0000;
+}
+
+body{
+    background: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 10;
+}
+
+.logo img{
+    width: 180px;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+.nav li a{
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav li:hover a{
+    color: var(--primary-color);
+}
+
+.search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.search input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    backdrop-filter: blur(10px);
+    padding: 0 10px 0 45px !important;
+    border-radius: 5px;
+}
+
+.search input::placeholder{
+    color: #fff;
+}
+
+.search i{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    padding-right: 10px;
+    color: #fff;
+}
+
+.anime-title{
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: url('./images/Yuta\ capa.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.play{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1.2em;
+    cursor: pointer !important;
+    transition: 0.3s;
+}
+
+.play i{
+    margin-right: 10px;
+    font-size: 1.5em;
+    cursor: pointer !important;
+}
+
+.play:hover{
+    color: var(--primary-color);
+}
+
+.content{
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+    display:none;
+    visibility: hidden;
+    transform:scale(0);
+    transition: 0.5s;
+}
+
+.content.active{
+    display:block;
+    visibility: visible;
+    transform:scale(1);
+    transition: 0.5s;
+}
+
+.banner .content h4{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.banner .content h4 span{
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.banner .content h4 span:first-child{
+    padding-left: 0;
+}
+
+.banner .content h4 span:last-child{
+    border-right: none;
+}
+
+.banner .content h4 span i{
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0 8px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.banner .content p{
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin: 10px 0 20px;
+}
+
+.banner .content .button{
+    position: relative;
+}
+
+.banner .content .button a{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.banner .content .button a:nth-child(2){
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.banner .content .button a:hover:nth-child(2){
+    background: var(--primary-color);
+}
+
+.banner .carousel-box{
+    position: relative;
+    min-width: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: 10px;
+    border-radius: 10px;
+}
+
+.carousel{
+    position: relative;
+    height: 550px;
+    perpective: 1500px;
+}
+
+.carousel .carousel-item{
+    width: 250px;
+    cursor: pointer;
+}
+
+.carousel .carousel-item img{
+    width: 235px;
+    border-radius: 10px;
+    transform: translateX(8px) translateY(-100px);
+    object-fit: cover;
+    object-position: center;
+}
+
+.sci{
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.sci a{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 25px;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sci a:hover{
+    color: var(--primary-color);
+}
+
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer video{
+    max-width: 900px;
+    outline: none;
+}
+
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 30px;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* 1. Telas grandes e Notebooks Médios (Abaixo de 1480px) */
+@media (max-width: 1480px) {
+    header {
+        padding: 20px 50px;
+    }
+    
+    .banner {
+        padding: 0 50px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .banner .carousel-box {
+        min-width: 600px; /* Reduz o tamanho do container do carrossel para caber na tela */
+    }
+
+    .carousel {
+        height: 450px;
+    }
+
+    .carousel .carousel-item {
+        width: 180px;
+    }
+
+    .carousel .carousel-item img {
+        width: 165px;
+        transform: translateX(8px) translateY(-50px);
+    }
+}
+
+/* ==========================================================================
+   MUDANÇA MOBILE EXATA (STYLE NETFLIX/IMOVIES)
+   ========================================================================== */
+@media (max-width: 992px) {
+    /* 1. Ajuste do Header para empilhar bonito no mobile */
+    header {
+        position: relative;
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 15px;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .nav {
+        margin: 0;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .search {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* 2. Banner estruturado de cima para baixo (Mantém o fluxo da referência) */
+    .banner {
+        padding: 20px 20px 160px; /* Espaço gigante no fundo para não cobrir o rodapé fixo */
+        flex-direction: column; /* Organiza em coluna normal de cima para baixo */
+        justify-content: flex-start;
+        align-items: center;
+        gap: 25px;
+        min-height: 100vh;
+        overflow-y: auto;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+
+    /* 3. Alinhamento dos textos e títulos */
+    .content.active {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        order: 1; /* Garante que o texto vem primeiro */
+    }
+
+    .anime-title {
+        max-width: 240px;
+        margin: 0 auto 10px;
+    }
+
+    .banner .content h4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .banner .content h4 span {
+        border: none !important; /* Remove barras verticais que quebram o layout */
+        padding: 0 4px;
+    }
+
+    .banner .content p {
+        font-size: 0.95rem;
+        line-height: 1.4em;
+        margin: 0 0 20px 0;
+        max-width: 600px;
+    }
+
+    /* 4. Botões de ação lado a lado como na referência */
+    .banner .content .button {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 10px;
+    }
+
+    .banner .content .button a {
+        margin-right: 0;
+        flex: 1; /* Faz os dois botões dividirem o tamanho igualmente */
+        text-align: center;
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+
+    /* 5. Caixa do Carrossel posicionada abaixo dos botões */
+    .banner .carousel-box {
+        order: 2;
+        min-width: 100%;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        backdrop-filter: none;
+        margin-top: 10px;
+    }
+
+    .carousel {
+        height: 350px;
+    }
+
+    .carousel .carousel-item {
+        width: 150px;
+    }
+
+    .carousel .carousel-item img {
+        width: 135px;
+        transform: translateX(0px) translateY(-40px); 
+    }
+
+    /* 6. Rodapé no Fluxo Normal (Sem ficar colado na tela) */
+    .play {
+        position: relative; /* Mudou de fixed para relative */
+        bottom: 0;
+        left: 0;
+        transform: none;
+        margin: 30px auto 10px; /* Margem em cima e embaixo para dar respiro */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.1rem;
+        z-index: 5;
+        order: 3; /* Vem logo após o carrossel */
+    }
+
+    .sci {
+        position: relative; /* Mudou de fixed para relative */
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 15px auto 40px; /* Margem generosa no fundo para fechar o layout */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 40px;
+        z-index: 5;
+        order: 4; /* É o último elemento da página */
+    }
+    
+    .sci a {
+        font-size: 24px;
+    }
+
+    /* Ajuste fino no container pai para permitir a rolagem suave */
+    .banner {
+        padding: 20px 20px 40px; /* Removeu aquele padding gigante fake */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        min-height: 100vh;
+        height: auto; /* Permite que o container estique se o conteúdo passar da tela */
+        overflow-y: visible; /* Garante que o scroll aconteça na página toda */
+    }
+}
+
+/* 3. Celulares (Abaixo de 576px) */
+@media (max-width: 576px) {
+    header {
+        padding: 15px;
+    }
+
+    .logo img {
+        width: 240px;
+    }
+
+    .nav li a {
+        font-size: 0.9rem;
+    }
+
+    .banner {
+        padding: 40px 20px;
+    }
+
+    .banner .content p {
+        font-size: 0.95rem;
+        line-height: 1.4em;
+    }
+
+    .carousel {
+        height: 320px;
+    }
+
+    .carousel .carousel-item {
+        width: 140px; /* Capas menores para telas de celular */
+    }
+
+    .carousel .carousel-item img {
+        width: 125px;
+        transform: translateX(8px) translateY(-20px);
+    }
+    
+    .trailer video {
+        width: 95%;
+    }
+}

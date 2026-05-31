@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Jujutsu Kaisen</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="./images/Jujutsu_Kaisen_logo.png" alt="Logo Jujutsu Kaisen">
+        </a>
+        <ul class="nav">
+            <li><a href="#">Anime</a></li>
+            <li><a href="#">Personagens</a></li>
+            <li><a href="#">Mangá</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Buscar...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </header>
+    
+    <div class="banner" id="banner">
+        <div class="content active">
+            <img src="./images/Jujutsu_Kaisen_logo.png" alt="Jujutsu Kaisen Logo" class="anime-title">
+            <h4>
+                <span id="info-ano">2020</span><span><i id="info-idade">+16</i></span><span id="info-tipo">Standalone</span><span id="info-genero">Drama</span>
+            </h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem atque corporis blanditiis saepe natus unde et vel voluptatum quia quis eligendi, consequatur itaque accusantium tempora at dolores ipsa ratione minus.</p>
+        <div class="button">
+            <a href="https://www.crunchyroll.com/pt-br/series/GRDV0019R/jujutsu-kaisen" target="_blank"><i class="fa-solid fa-play"></i> Assistir</a>
+            <a href="https://mangalivre.blog/capitulo/jujutsu-kaisen-capitulo-1-ryomen-sukuna/" target="_blank"><i class="fa-solid fa-book"></i> Ver o Mangá</a>
+        </div>
+      </div>
+      <div class="carousel-box">
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="./images/jujutsu kaisen.jpg" alt="Yuta Okkotsuki">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/Vol_1.jpg" alt="Yuji Itadori">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/Jujutsu Kaisen - V2.jpg" alt="Megumi Fushiguro">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/Jujutsu Kaisen, Vol_ 3.jpg" alt="Nobara Kugisaki">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/jujutsu kaisen - V4.jpg" alt="Satoru Gojo">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/𝐌𝐀𝐍𝐆𝐀 𝐂𝐎𝐕𝐄𝐑 _ 𝐉𝐔𝐉𝐔𝐓𝐒𝐔 𝐊𝐀𝐈𝐒𝐄𝐍.jpg" alt="Sukuna">
+            </div>
+        </div>
+      </div>
+        <a href="#" class="play" onClick="toggleVideo()"><i class="fa-regular fa-circle-play"></i> Assista o Trailer</a>
+        <ul class="sci">
+            <li><a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+    </div>
+    <div class="trailer">
+        <video src="./images/YTDown_YouTube_JUJUTSU-KAISEN-TRAILER-OFICIAL_Media_ynr6gnyu9NE_001_1080p.mp4" muted controls="true" autoplay="true"></video>
+        <img src="./images/close.png" alt="Close" class="close" onClick="toggleVideo()">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
