@@ -14,48 +14,48 @@ function toggleVideo() {
 // 2. Banco de dados com caminhos separados para PC (deitada) e Celular (vertical/centralizada)
 const dadosCapas = [
     {
-        background: "./images/Yuta capa.jpg",         // Imagem horizontal para PC
-        backgroundMobile: "./images/yuta-mobile.webp", // Imagem vertical para Celular
+        background: "Yuta capa.jpg",         // Imagem horizontal para PC
+        backgroundMobile: "yuta-mobile.webp", // Imagem vertical para Celular
         ano: "2020",
         idade: "+16",
         tipo: "Standalone",
         genero: "Drama"
     },
     {
-        background: "./images/yuji capa.jpg",
-        backgroundMobile: "./images/itadori-mobile.webp",
+        background: "yuji capa.jpg",
+        backgroundMobile: "itadori-mobile.webp",
         ano: "2018",
         idade: "+14",
         tipo: "271 Capítulos",
         genero: "Drama"
     },
     {
-        background: "./images/megumi capa.jpg",
-        backgroundMobile: "./images/megumi-mobile.webp",
+        background: "megumi capa.jpg",
+        backgroundMobile: "megumi-mobile.webp",
         ano: "2019",
         idade: "+14",
         tipo: "30 Capítulos",
         genero: "Drama"
     },
     {
-        background: "./images/nobara capa.jpg",
-        backgroundMobile: "./images/nobara-mobile.webp",
+        background: "nobara capa.jpg",
+        backgroundMobile: "nobara-mobile.webp",
         ano: "2019",
         idade: "+16",
         tipo: "45 Capítulos",
         genero: "Drama"
     },
     {
-        background: "./images/satoru capa.jpg",
-        backgroundMobile: "./images/satoru-mobile.webp",
+        background: "satoru capa.jpg",
+        backgroundMobile: "satoru-mobile.webp",
         ano: "2020",
         idade: "+18",
         tipo: "12 Capítulos",
         genero: "Drama"
     },
     {
-        background: "./images/sukuna capa.jpg",
-        backgroundMobile: "./images/sukuna-mobile.webp",
+        background: "sukuna capa.jpg",
+        backgroundMobile: "sukuna-mobile.webp",
         ano: "2021",
         idade: "+18",
         tipo: "85 Capítulos",
